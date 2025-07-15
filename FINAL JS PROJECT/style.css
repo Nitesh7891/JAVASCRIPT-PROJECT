@@ -1,0 +1,433 @@
+@font-face {
+    font-family: 'plainlight';
+    src: url('fonts/plain-light-webfont.ttf')format('truetype');
+}
+
+@font-face {
+    font-family: 'plain';
+    src: url('fonts/plain-regular-webfont.ttf')format('truetype');
+}
+
+@font-face {
+    font-family: 'Silk Serif';
+    src: url("fonts/silkserif-regularitalic-webfont.ttf")format('truetype');
+}
+
+@font-face {
+    font-family: 'Silk Serif';
+    src: url('fonts/silkserif-lightitalic-webfont.ttf')format('truetype');
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+color: white;
+font-family: 'plainlight';
+}
+
+html,body{
+    width:100%;
+    height: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+#crsr{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    position: fixed;
+    border: 1px solid #ffffffbe;
+    z-index: 999;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+    
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #0b0b0b;
+    padding: 25vh 10vw;
+}
+
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+
+#line1-part1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2vw;
+}
+
+#line1-part1 h5,h6{
+    font-size: 3vw;
+    font-weight: 100;
+    font-family:'Silk Serif';
+}
+
+#line1-part1 h5{
+    width: 5vw;
+    text-align: right;
+}
+
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.line h2{
+    font-size: 5.1vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity:0;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+}
+@keyframes ani{
+    0%{
+        font-family: 'Plain light';
+        -webkit-text-stroke:0.1px #fff;
+        font-weight: 500;
+        color: #fff;
+        opacity: 0;
+    }
+    47%{
+        font-family: 'Plain light';
+        -webkit-text-stroke:0.1px #fff;
+        font-weight: 500;
+        color: #fff;
+        opacity: 1;
+    }
+    50%{
+        font-family: 'silk serif';
+        -webkit-text-stroke:0.1px #fff;
+        font-weight: 500;
+        color:transparent;
+        opacity: 0;
+
+    }
+    100%{
+        font-family: 'silk serif';
+        -webkit-text-stroke:0.1px #fff;
+        font-weight: 500;
+        color:transparent;
+        opacity: 1;
+
+    }
+}
+#main{
+    position: relative;
+    background-color:#151515;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+#page1 #nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.3vw 5.5vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav-part2{
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+.hero{
+    width: 72%;
+    margin-left: 27%;
+    height: fit-content;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+  /* z-index: 9999;*/
+}
+
+
+.hero:nth-child(2){
+    margin-top: 18vh;
+}
+.hero h1{
+    font-size: 7.2vw;
+    font-weight: 600;
+    line-height: 7.2vw;
+    position: relative;
+}
+
+#hero1::before{
+    content: "01";
+    font-size: 3vw;
+    position: absolute;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: 19%;
+    top: 30%;
+}
+
+.hero h2{
+    font-size: 7.2vw;
+    font-weight: 600;
+    line-height: 7.2vw;
+    border-bottom: 0.5vw solid #fff;
+   /* padding-bottom: 0.8vw;
+    transition: all ease 0.3s;*/
+}
+.hero h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    border-bottom: 0.5vw solid #ffffff00;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+}
+#video-container{
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+}
+#video-container img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-cursor{
+    background-color: #ffa63d;
+    height: 8.5vw;
+    width: 8.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+#video-cursor i{
+    font-size: 2vw;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #d2d2d2b8;
+    position: relative;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+  /*  background-color: #d2d2d2b8;*/
+    position: relative;
+    padding: 7vh 0;
+}
+#page4-content{
+    width: 72vw;
+    margin-left: 28%;
+}
+#page4-content h1{
+    font-size: 7vw;
+    position: relative;
+}
+#page4-content h1::before{
+    content: "03";
+    font-size: 3vw;
+    position: absolute;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -12%;
+    top: 8%;
+}
+#page4-content .underline{
+    height: 1px;
+    width: 100%;
+    margin: 5vw 0;
+    background-color: #fff;
+}
+#page4-content>p{
+width: 50%;
+font-size:2.05vw ;
+margin-bottom: 3vw;
+}
+#page4-flex{
+    display: flex;
+   /* align-items: center;
+    justify-content: center;*/
+}
+#page4-flex img{
+    width: 48%;
+}
+#page4-flex p{
+    font-size:0.9 vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+
+#page4-bluediv{
+    background-color: #3f7df4;
+    width: 33vw;
+    padding: 3vw;
+   position: relative;
+   margin-top: -35vh;
+   margin-left: 26vw;
+}
+.blue-divelem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.7vw 0;
+    border-bottom: 2px solid #ffffff94;
+}
+.blue-divelem h4{
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.blue-divelem p{
+    width: 30%;
+    font-size: 0.9vw;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.elem{
+ white-space: nowrap;
+ overflow-x: hidden;
+ margin-bottom: -1vw;
+}
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    display: inline-block;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    margin-right:16px;
+    animation-name:anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
+
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translate3d(calc(-100% - 20px),0,0);
+
+}
+}
+.elem2{
+    white-space: nowrap;
+ overflow-x: hidden;
+ margin-bottom: -1vw;
+}
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #ffffff;
+    display: inline-block;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    margin-right:16px;
+    transform: translate3d(calc(-100% - 20px),0,0);;
+    animation-name:anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+}
+.elem span,.elem2 span{
+    font-style: italic;
+    font-family: "silkf serif";
+    color: transparent;
+}
+#footer{
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+}
+#footer h1{
+    font-size: 7vw;
+    width: 60 vw;
+    text-transform: uppercase;
+    position: relative;
+   
+}
+#footer h1::before{
+    content: "04";
+    font-size: 3vw;
+    position: absolute;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -12%;
+    top: 8%;
+}
+.underline{
+    height:1px;
+    width: 100%;
+    background-color: #fff;
+    margin:  2.8vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right:  15vw;
+    padding-top: 3vw;
+    margin-bottom: 6vw;
+}
+#footer-div h6{
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+  font-family: none;
+  font-weight: 500;
+}
+.box{
+    width: 30%;
+}
+#footer-div h5{
+    font-size: 1.2vw;
+    /*margin: 0.1vh 0;*/
+    font-weight: 500;
+}
+
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}

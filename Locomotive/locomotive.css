@@ -1,0 +1,45 @@
+*{
+    margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height: 100%;
+}
+
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+}
+
+#page2{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(25, 0, 255, 0.797);
+    overflow: hidden;
+}
+
+#page3{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 221, 0);
+}
+
+#page2 #image-div{
+    height:100%;
+    width: 35%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+#image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.5;
+}
